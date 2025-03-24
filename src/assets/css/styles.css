@@ -1,0 +1,376 @@
+/* Main styles for portfolio */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body spans the full viewport height */
+  max-width: 100%;
+  font-family: Georgia, Cambria, Cochin, Times, 'Times New Roman', serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0.25rem;
+  width: 100%;
+  margin: 0;
+}
+
+header img {
+  width: 15vw;
+  height: auto;
+  margin: 0 10px 0 10px;
+  display: flex;  
+}
+
+main {
+  flex: 1; /* Allow main to grow and fill the remaining space */
+  width: 100%;
+  margin: 0;
+}
+
+/* Dark/Light mode styles */
+body.light {
+  background-color: #ECE3DA; 
+  color: #000000; 
+}
+
+body.dark {
+  background-color: #605856; 
+  color: #ffffff; 
+}
+
+body.dark header {
+  background-color: #70ABAF;
+}
+
+body.light header {
+  background-color: #605856;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  margin: 0;
+}
+
+footer img {
+  width: 4rem;
+  height: auto;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Container div styling */
+.dark, .light {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+.toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle img {
+  width: 4em;
+  height: auto;
+  border-radius: 30%;  
+  align-items: center;
+}
+
+/* Navigation styles */
+#navigation {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+#navigation a {
+  text-decoration: none;
+}
+
+#navigation button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+body.dark #navigation button {
+  background-color: #70ABAF;
+  color: #fff;
+}
+
+body.dark #navigation button:hover,
+body.dark #navigation a.active button {
+  background-color: #ffffff;
+  font-weight: bold;
+  color: #000000;
+  border: 2px solid #000000;
+  font-size: 24px;
+}
+
+body.light #navigation button {
+  background-color: #605856;
+  color: #ffffff;
+}
+
+body.light #navigation button:hover, 
+body.light #navigation a.active button {
+  background-color: #70ABAF;
+  font-weight: bold;
+  color: #000000;
+  border: 2px solid #000000;
+  font-size: 24px;
+}
+
+/* About me section */
+#aboutme {
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
+
+#name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Portfolio section */
+.portfolio-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.portfolio-item {
+  position: relative;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 500ms ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-item > div {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  width: 100%;
+}
+
+.portfolio-item a {
+  color: white;
+  text-decoration: underline;
+  margin: 0 5px;
+}
+
+/* All portfolio items consistent size */
+.portfolio-item {
+  height: 200px;
+}
+
+/* Background images for projects */
+.vehicle-builder {
+  background-image: url('../images/VehicleBuilder.png');
+}
+
+.weather-app {
+  background-image: url('../images/Weather.png');
+}
+
+.computer-cat {
+  background-image: url('../images/computer.cat.png');
+}
+
+.employee-tracker {
+  background-image: url('../images/employeeTracker.png');
+}
+
+.vetra {
+  background-image: url('../images/Vetra.png');
+}
+
+.read-me-gen {
+  background-image: url('../images/READMEgenerator.png');
+}
+
+/* Contact form styles */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input.error,
+textarea.error {
+  border-color: red;
+}
+
+.error-text {
+  color: whitesmoke;
+  font-style: italic;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+button[type='submit'] {
+  background-color: #70ABAF;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+button[type='submit']:hover {
+  background-color: #5d8f93;
+}
+
+/* Resume page */
+.resume-download {
+  display: inline-block;
+  background-color: #70ABAF;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}
+
+.resume-download:hover {
+  background-color: #5d8f93;
+}
+
+.proficiencies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.proficiencies > div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.proficiencies ul {
+  padding-left: 1.5rem;
+}
+
+.proficiencies li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 900px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  header img {
+    margin-top: 1rem;
+    width: 20vw;
+  }
+  
+  #navigation {
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .portfolio-list {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Consistent portfolio items on mobile */
+  .portfolio-item {
+    height: 180px;
+  }
+  
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+
