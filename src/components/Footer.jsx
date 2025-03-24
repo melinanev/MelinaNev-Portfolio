@@ -1,4 +1,6 @@
 import React from 'react';
+import githubIcon from '../assets/images/github.png';
+import linkedinIcon from '../assets/images/linkedinlogo.png';
 
 function Footer() {
   return (
@@ -7,13 +9,13 @@ function Footer() {
       <nav>
         <ul>
           <li>
-          <a href="https://github.com/melinanev" target="_blank">
-          <img src="src/assets/images/github.png" alt="GitHub" className="social-icon" />
+          <a href="https://github.com/melinanev" target="_blank" rel="noopener noreferrer">
+          <img src={githubIcon} alt="GitHub" className="social-icon" />
             </a>
           </li>
           <li>
-          <a href="www.linkedin.com/in/melina-nevarez-rvt-555208111" target="_blank">
-          <img src="src/assets/images/linkedinlogo.png" alt="LinkedIn" class="social-icon"/>
+          <a href="https://www.linkedin.com/in/melina-nevarez-rvt-555208111" target="_blank" rel="noopener noreferrer">
+          <img src={linkedinIcon} alt="LinkedIn" className="social-icon"/>
             </a>
           </li>
         </ul>
